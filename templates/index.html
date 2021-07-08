@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(0, 0, 0)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Sentiment Analysis</h1>
+            <h2>Enter the Statement:</h2>
+            <input id="first" name="Statement" type="text">
+            
+            <br><br><button id="sub" type="submit ">Analyse</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 0px;
+        }
+
+        #sub {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        
+        #sub:hover {
+            background-color: rgb(34, 236, 15);
+        }
+        
+        #first {
+            border-radius: 10px;
+            height: 40px;
+            width: 500px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
