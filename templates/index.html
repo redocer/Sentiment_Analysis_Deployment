@@ -11,21 +11,17 @@
 
     <div style="color:rgb(0, 0, 0)">
         <form action="{{ url_for('predict')}}" method="post">
-            <h1>Sentiment Analysis</h1>
-            <h2>Enter the Statement:</h2>
+            <h1>Hi, I am Sentinel.</h1>
+            <h2>I'm a Natural Language Processing Model. <br><br>I have the ability to predict the sentiment behind any sentence.<br>Why don't you give it a try? Just type any sentence in the input box below:</h2>
             <input id="first" name="Statement" type="text">
             
             <br><br><button id="sub" type="submit ">Analyse</button>
             <br>
 
-
+            <br><h3>{{ prediction_text }}<h3></h3>
 
 
         </form>
-
-
-
-        <br><br><h3>{{ prediction_text }}<h3>
     </div>
 
 
@@ -33,29 +29,87 @@
 
     <style>
         body {
-            background-color: rgb(255, 255, 255);
+            background-image: linear-gradient(to right, rgba(141, 9, 250, 0.192), rgba(255, 0, 234, 0.253), rgba(7, 11, 248, 0.288));
             text-align: center;
             padding: 0px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+            height: 60%;
+            width: 70%;
+            text-align: center;
+            align-self: center;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-bottom: 5%;
+            padding-top: 3%;
+            background-color: white;
+        }
+        h1{
+            text-align: center;
+            width: 100%;
+            position: relative;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bolder;
+        }
+
+        h2{
+            text-align: left;
+            width: 100%;
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        h3{
+            text-align: center;
+            width: 100%;
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-weight: bold;
         }
 
         #sub {
-            width: 150px;
-            height: 40px;
+            display: inline-block;
+            padding: .75rem 1.25rem;
+            border-radius: 4px;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .15rem;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            width: 100%;
+            height: 100px;
             text-align: center;
-            border-radius: 10px;
-            font-size: 20px;
+            background: #801cf3d2;
         }
         
         #sub:hover {
-            background-color: rgb(34, 236, 15);
+            background-color: rgba(112, 14, 168, 0.507);
+            border: 3px solid rgb(122, 12, 247);
+            flex-grow: 1;
         }
         
         #first {
-            border-radius: 10px;
-            height: 40px;
-            width: 500px;
-            font-size: 20px;
-            text-align: center;
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 3px solid rgba(121, 12, 247, 0.692);
+            border-radius: 4px;
+            background-color: #dcb8e72c;
+            resize: none;
+            word-wrap: break-word;
         }
     </style>
 </body>
